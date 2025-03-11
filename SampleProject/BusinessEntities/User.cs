@@ -60,10 +60,7 @@ namespace BusinessEntities
 
         public void SetEmail(string email)
         {
-            if (string.IsNullOrEmpty(email))
-            {
-                throw new ArgumentNullException("Name was not provided.");
-            }
+            // Can't tell if this is a trick or not, should a user be allowed to have no email?
             _email = email;
         }
 
