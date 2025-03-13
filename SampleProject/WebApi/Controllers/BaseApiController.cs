@@ -8,9 +8,9 @@ namespace WebApi.Controllers
     public abstract class BaseApiController : ApiController
     {
 
-        public HttpResponseMessage AlreadyExists(Guid userId)
+        public HttpResponseMessage AlreadyExists(Guid id)
         {
-            return ControllerContext.Request.CreateResponse(HttpStatusCode.BadRequest, $"User with id {userId} already exists.");
+            return ControllerContext.Request.CreateResponse(HttpStatusCode.BadRequest, $"Record with id {id} already exists.");
         }
 
         public HttpResponseMessage Found(object obj)

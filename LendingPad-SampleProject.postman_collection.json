@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "26c5397e-2163-4643-ae23-13c5eb581e25",
+		"_postman_id": "0592cfc9-0e7e-4979-8aa0-9f61b67f38a0",
 		"name": "LendingPad-SampleProject",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "30292534"
+		"_exporter_id": "42993632"
 	},
 	"item": [
 		{
@@ -270,6 +270,36 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "List Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:49834/users/list?skip=0&take=100",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "49834",
+							"path": [
+								"users",
+								"list"
+							],
+							"query": [
+								{
+									"key": "skip",
+									"value": "0"
+								},
+								{
+									"key": "take",
+									"value": "100"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -278,11 +308,571 @@
 			"item": [
 				{
 					"name": "Products",
-					"item": []
+					"item": [
+						{
+							"name": "Clear Products",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:49834/products/clear",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "49834",
+									"path": [
+										"products",
+										"clear"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Product 1",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Space Heater\",\r\n    \"description\": \"Heater for space.\",\r\n    \"price\": 1000000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:49834/products/904099EC-CA04-42E1-9D39-E642222C37D8/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "49834",
+									"path": [
+										"products",
+										"904099EC-CA04-42E1-9D39-E642222C37D8",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Product 2",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Very Small Shovel\",\r\n    \"description\": \"Used for digging tiny holes.\",\r\n    \"price\": 2000000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:49834/products/B3599B7F-C6A7-4A40-AAAB-C18E1DDA70BD/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "49834",
+									"path": [
+										"products",
+										"B3599B7F-C6A7-4A40-AAAB-C18E1DDA70BD",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Product 3",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Ripe Bananas\",\r\n    \"description\": \"Beautiful Bunch.\",\r\n    \"price\": 10\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:49834/products/823D73F2-4680-4DB7-B473-F2166A464B84/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "49834",
+									"path": [
+										"products",
+										"823D73F2-4680-4DB7-B473-F2166A464B84",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Product 3",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Ripe Bananas\",\r\n    \"description\": \"Beautiful Bunch.\",\r\n    \"price\": 100\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:49834/products/823D73F2-4680-4DB7-B473-F2166A464B84/update",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "49834",
+									"path": [
+										"products",
+										"823D73F2-4680-4DB7-B473-F2166A464B84",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Product",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:49834/products/904099EC-CA04-42E1-9D39-E642222C37D8",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "49834",
+									"path": [
+										"products",
+										"904099EC-CA04-42E1-9D39-E642222C37D8"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List Products",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:49834/products/list?skip=0&take=100",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "49834",
+									"path": [
+										"products",
+										"list"
+									],
+									"query": [
+										{
+											"key": "skip",
+											"value": "0"
+										},
+										{
+											"key": "take",
+											"value": "100"
+										},
+										{
+											"key": "orderId",
+											"value": "3C628A29-C499-41FD-95A3-5BA503863881",
+											"disabled": true
+										},
+										{
+											"key": "name",
+											"value": "shovel",
+											"disabled": true
+										},
+										{
+											"key": "description",
+											"value": "beautiful",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List Products by Name",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:49834/products/list?skip=0&take=100&name=small",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "49834",
+									"path": [
+										"products",
+										"list"
+									],
+									"query": [
+										{
+											"key": "skip",
+											"value": "0"
+										},
+										{
+											"key": "take",
+											"value": "100"
+										},
+										{
+											"key": "name",
+											"value": "small"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List Products by Order 1",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:49834/products/list?skip=0&take=100&orderId=3C628A29-C499-41FD-95A3-5BA503863881",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "49834",
+									"path": [
+										"products",
+										"list"
+									],
+									"query": [
+										{
+											"key": "skip",
+											"value": "0"
+										},
+										{
+											"key": "take",
+											"value": "100"
+										},
+										{
+											"key": "orderId",
+											"value": "3C628A29-C499-41FD-95A3-5BA503863881"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List Products by Order 2",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:49834/products/list?skip=0&take=100&orderId=55291ada-1e42-4971-b638-7846dddf2e8a",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "49834",
+									"path": [
+										"products",
+										"list"
+									],
+									"query": [
+										{
+											"key": "skip",
+											"value": "0"
+										},
+										{
+											"key": "take",
+											"value": "100"
+										},
+										{
+											"key": "orderId",
+											"value": "55291ada-1e42-4971-b638-7846dddf2e8a"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Product 1",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:49834/products/904099EC-CA04-42E1-9D39-E642222C37D8/delete",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "49834",
+									"path": [
+										"products",
+										"904099EC-CA04-42E1-9D39-E642222C37D8",
+										"delete"
+									]
+								}
+							},
+							"response": []
+						}
+					]
 				},
 				{
 					"name": "Orders",
-					"item": []
+					"item": [
+						{
+							"name": "Clear Orders",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:49834/orders/clear",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "49834",
+									"path": [
+										"orders",
+										"clear"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Order 1",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userId\": \"1422740e-6426-4c46-8445-3f5274a62424\",\r\n    \"orderDate\": \"2025-01-01\",\r\n    \"productIds\": [\r\n        \"904099EC-CA04-42E1-9D39-E642222C37D8\", // Space Heater\r\n        \"B3599B7F-C6A7-4A40-AAAB-C18E1DDA70BD\" // Very Small Shovel\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:49834/orders/3C628A29-C499-41FD-95A3-5BA503863881/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "49834",
+									"path": [
+										"orders",
+										"3C628A29-C499-41FD-95A3-5BA503863881",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Order 2",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userId\": \"9422740e-6426-4c46-8445-3f5274a62424\",\r\n    \"orderDate\": \"2022-12-25\",\r\n    \"productIds\": [\r\n        \"823D73F2-4680-4DB7-B473-F2166A464B84\" // Ripe Bananas\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:49834/orders/55291ADA-1E42-4971-B638-7846DDDF2E8A/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "49834",
+									"path": [
+										"orders",
+										"55291ADA-1E42-4971-B638-7846DDDF2E8A",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Order 2",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userId\": \"9422740e-6426-4c46-8445-3f5274a62424\",\r\n    \"orderDate\": \"2022-12-25\",\r\n    \"productIds\": [\r\n        \"904099EC-CA04-42E1-9D39-E642222C37D8\", // Space Heater\r\n        \"B3599B7F-C6A7-4A40-AAAB-C18E1DDA70BD\", // Very Small Shovel\r\n        \"823D73F2-4680-4DB7-B473-F2166A464B84\" // Ripe Bananas\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:49834/orders/55291ADA-1E42-4971-B638-7846DDDF2E8A/update",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "49834",
+									"path": [
+										"orders",
+										"55291ADA-1E42-4971-B638-7846DDDF2E8A",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Order",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:49834/orders/3C628A29-C499-41FD-95A3-5BA503863881",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "49834",
+									"path": [
+										"orders",
+										"3C628A29-C499-41FD-95A3-5BA503863881"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List Orders",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:49834/orders/list?skip=0&take=100",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "49834",
+									"path": [
+										"orders",
+										"list"
+									],
+									"query": [
+										{
+											"key": "skip",
+											"value": "0"
+										},
+										{
+											"key": "take",
+											"value": "100"
+										},
+										{
+											"key": "productId",
+											"value": "904099EC-CA04-42E1-9D39-E642222C37D8",
+											"disabled": true
+										},
+										{
+											"key": "orderDate",
+											"value": "2022-12-25",
+											"disabled": true
+										},
+										{
+											"key": "userId",
+											"value": "9422740e-6426-4c46-8445-3f5274a62424",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List Orders by Product 1",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:49834/orders/list?skip=0&take=100&productId=904099EC-CA04-42E1-9D39-E642222C37D8",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "49834",
+									"path": [
+										"orders",
+										"list"
+									],
+									"query": [
+										{
+											"key": "skip",
+											"value": "0"
+										},
+										{
+											"key": "take",
+											"value": "100"
+										},
+										{
+											"key": "productId",
+											"value": "904099EC-CA04-42E1-9D39-E642222C37D8"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Order 1",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:49834/orders/3C628A29-C499-41FD-95A3-5BA503863881/delete",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "49834",
+									"path": [
+										"orders",
+										"3C628A29-C499-41FD-95A3-5BA503863881",
+										"delete"
+									]
+								}
+							},
+							"response": []
+						}
+					]
 				}
 			]
 		}
